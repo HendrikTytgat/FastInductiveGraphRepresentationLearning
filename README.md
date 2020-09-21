@@ -6,4 +6,14 @@ Currently there are three versions implemented in this repository. They all diff
 
 The main version in use, compresses this matrix together with the normalized random walk matrix created in the inductive step. This is the FIGRL class.
 
+## Getting started with this Spectral graph embedding algorithm
+(All node IDs for all node types should be transformed to consecutive integer numbers, for instance node type 1 from 0 to 1379 and node type 2 form 1380 to 4598)
+
+Initializing the function, it requires a final embedding size and intermediate dimension. The intermediate dimension combined with the final embedding size determine the approximation error.
+
+Before being able to fit the train data to FIGRL, the data needs to be transformed to a networkX graph. (IMPORTANT NOTE: the order in which the graph is created, is the order that the train embeddings will be generated in)
+
+Perparing for the inductive step or predict function, a networkx graph needs to be created with the training and inductive data (The same important note holds here). The full inductive dataframe for the new incoming nodes for which embeddings are needed. A list of the inductive dataframe columns that are connected node types (ex. [InductiveDataframe.ConnectedNode1,InductiveDataframe.ConnectedNode2,...]). Additionally the maximum id number and the inductive datasets index dataframe should be given.
+
+
 [paper]: <https://arxiv.org/pdf/1809.08079>
