@@ -4,7 +4,7 @@ This repository contains the implemented Fast Inductive Graph Representation Lea
 
 Currently there are three versions implemented in this repository. They all differ in the way the classes deal with the normally distributed random matrix.
 
-The main version in use, compresses this matrix together with the normalized random walk matrix created in the inductive step. This is the FIGRL class.
+The main version in use (implemented as FIGRL), differs from the paper and compresses this matrix together with the normalized random walk matrix created in the inductive step. This is the FIGRL class.
 
 ## Getting started with this Spectral graph embedding algorithm
 (All node IDs for all node types should be transformed to consecutive integer numbers, for instance node type 1 from 0 to 1379 and node type 2 form 1380 to 4598)
